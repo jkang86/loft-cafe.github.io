@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loft Café — Locations</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR (same as index.html) -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Loft Café</div>
+      <span class="nav-tagline">Coffee • Pastries • Community</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="locations.html">Locations</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="shop.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <button id="cart-toggle" class="btn-outline">
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <!-- MAIN CONTENT: LOCATIONS PAGE -->
+  <main>
+    <section class="section section-light">
+      <div class="section-header center">
+        <h2>Our Locations</h2>
+        <p>Find your favorite Loft Café spot.</p>
+      </div>
+
+      <div class="locations-grid">
+        <!-- Location 1 -->
+        <div class="location-card">
+          <h3>Main Loft</h3>
+          <p class="location-address">
+            123 Loft Street<br />
+            Your City, ST 00000
+          </p>
+          <p class="location-hours">
+            Mon–Fri: 7:00am – 7:00pm<br />
+            Sat–Sun: 8:00am – 6:00pm
+          </p>
+          <p class="location-contact">
+            (000) 000-0000<br />
+            <a href="mailto:hello@loftcafe.com">hello@loftcafe.com</a>
+          </p>
+          <a class="location-link" href="#" target="_blank" rel="noopener">
+            Get Directions
+          </a>
+        </div>
+
+        <!-- Location 2 (optional – delete if you have only one) -->
+        <!--
+        <div class="location-card">
+          <h3>Loft Café — West Side</h3>
+          <p class="location-address">
+            456 Market Avenue<br />
+            Your City, ST 00000
+          </p>
+          <p class="location-hours">
+            Daily: 8:00am – 6:00pm
+          </p>
+          <p class="location-contact">
+            (000) 000-1111<br />
+            <a href="mailto:west@loftcafe.com">west@loftcafe.com</a>
+          </p>
+          <a class="location-link" href="#" target="_blank" rel="noopener">
+            Get Directions
+          </a>
+        </div>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Loft Café</span>
+        <span class="footer-text">Instagram: @loftcafe • Contact: <a href="mailto:hello@loftcafe.com">hello@loftcafe.com</a></span>
+      </div>
+      <div class="footer-right">
+        <span>© <span id="year"></span> Loft Café</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART PANEL (same as index.html) -->
+  <aside id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="cart-close" class="btn-icon">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        Total: <span id="cart-total">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="btn-primary btn-full">
+        Checkout
+      </button>
+      <p class="cart-note">
+        This will open an email draft with your order details for now.
+      </p>
+    </div>
+  </aside>
+
+  <div id="cart-backdrop" class="cart-backdrop"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
