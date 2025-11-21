@@ -10,64 +10,125 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- TOP BAR / NAV -->
   <header class="navbar">
-    <div class="logo">Loft Café</div>
-    <nav>
+    <div class="nav-left">
+      <div class="logo">Loft Café</div>
+      <span class="nav-tagline">Coffee • Pastries • Community</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#locations">Locations</a>
       <a href="#about">About</a>
       <a href="#menu">Menu</a>
       <a href="#shop">Shop</a>
-      <a href="#visit">Visit</a>
+      <a href="#gallery">Gallery</a>
     </nav>
+
     <button id="cart-toggle" class="btn-outline">
       Cart <span id="cart-count">0</span>
     </button>
   </header>
 
+  <!-- HERO SECTION (big photo like Culture Espresso home) -->
   <section class="hero">
-    <div class="hero-text">
+    <!-- HERO BACKGROUND IMAGE -->
+    <!-- TODO: replace src with one of YOUR café photos -->
+    <img
+      src="images/loft-hero.jpg"
+      alt="Loft Café interior"
+      class="hero-img"
+    />
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">In the heart of your city</p>
       <h1>Loft Café</h1>
-      <p>Small-batch coffee, cozy vibes, and fresh pastries in the heart of the city.</p>
+      <p class="hero-subtitle">Cozy, modern, and always brewing something fresh.</p>
+
+      <div class="hero-meta">
+        <span>Everyday • 7AM – 7PM</span>
+        <span>Specialty coffee • Fresh pastry • Wi-Fi</span>
+      </div>
+
       <div class="hero-actions">
         <a href="#shop" class="btn-primary">Order Online</a>
-        <a href="#visit" class="btn-secondary">Visit Us</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <!-- Replace with your café photo later -->
-      <div class="hero-placeholder">Your Café Photo Here</div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="section-header">
-      <h2>About Loft</h2>
-      <p>A modern loft-style café for studying, meeting, and unwinding.</p>
-    </div>
-    <div class="about-grid">
-      <div class="card">
-        <h3>Our Coffee</h3>
-        <p>We source ethically grown beans and roast them in-house for bold, smooth flavor.</p>
-      </div>
-      <div class="card">
-        <h3>The Space</h3>
-        <p>High ceilings, soft lighting, and comfy seating designed for deep work and cozy dates.</p>
-      </div>
-      <div class="card">
-        <h3>Community</h3>
-        <p>We host open-mic nights, art shows, and local pop-ups to support our neighborhood.</p>
+        <a href="#locations" class="btn-secondary">View Locations</a>
       </div>
     </div>
   </section>
 
-  <section id="menu" class="section section-alt">
-    <div class="section-header">
-      <h2>Signature Menu</h2>
-      <p>Our most loved drinks and bites.</p>
+  <!-- LOCATIONS (inspired by Culture Espresso layout) -->
+  <section id="locations" class="section section-light">
+    <div class="section-header center">
+      <h2>Locations</h2>
+      <p>Your neighborhood loft for coffee, study, and slow mornings.</p>
     </div>
+
+    <div class="locations-grid">
+      <!-- If you have more than one location, duplicate this block -->
+      <div class="location-card">
+        <h3>Main Loft</h3>
+        <p class="location-address">
+          123 Loft Street<br />
+          Your City, ST 00000
+        </p>
+        <p class="location-hours">
+          Mon–Fri: 7:00am – 7:00pm<br />
+          Sat–Sun: 8:00am – 6:00pm
+        </p>
+        <p class="location-contact">
+          (000) 000-0000<br />
+          <a href="mailto:hello@loftcafe.com">hello@loftcafe.com</a>
+        </p>
+        <!-- If you have a Google Maps link, put it here -->
+        <a class="location-link" href="#" target="_blank" rel="noopener">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-border">
+    <div class="about-layout">
+      <div class="about-text">
+        <h2>About Loft Café</h2>
+        <p>
+          Loft Café is a light-filled, loft-style coffee shop where city noise fades
+          and good coffee takes center stage. We brew small-batch espresso, bake
+          pastries in-house, and offer a space designed for both deep focus and
+          easy conversation.
+        </p>
+        <p>
+          From students and remote workers to neighbors and regulars, Loft is built
+          around community. Grab a seat by the window, plug in, and stay a while.
+        </p>
+      </div>
+
+      <!-- Replace this with a real about-photo -->
+      <div class="about-photo-wrap">
+        <img
+          src="images/loft-bar.jpg"
+          alt="Bar and counter at Loft Café"
+          class="about-photo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section id="menu" class="section section-light">
+    <div class="section-header center">
+      <h2>Signature Drinks & Bites</h2>
+      <p>Some of the favorites our regulars keep coming back for.</p>
+    </div>
+
     <div class="menu-grid">
       <div class="menu-item">
         <h3>Loft Latte</h3>
-        <p>Rich espresso with silky steamed milk and a hint of vanilla.</p>
+        <p>House espresso with microfoam milk and a touch of vanilla.</p>
       </div>
       <div class="menu-item">
         <h3>Cold Brew</h3>
@@ -75,27 +136,35 @@
       </div>
       <div class="menu-item">
         <h3>Matcha Cloud</h3>
-        <p>Premium matcha with micro-foamed milk and a touch of sweetness.</p>
+        <p>Premium matcha whisked with velvet milk and light sweetness.</p>
       </div>
       <div class="menu-item">
         <h3>Almond Croissant</h3>
-        <p>Flaky, buttery pastry with almond filling and toasted almonds.</p>
+        <p>Buttery laminated pastry with toasted almond filling.</p>
       </div>
     </div>
   </section>
 
-  <!-- SHOP / MARKETPLACE -->
-  <section id="shop" class="section">
-    <div class="section-header">
+  <!-- SHOP / MARKETPLACE (same cart system, new style) -->
+  <section id="shop" class="section section-border">
+    <div class="section-header center">
       <h2>Loft Marketplace</h2>
-      <p>Order your favorites online or grab Loft merch.</p>
+      <p>Beans, cold brew, and merch you can take home.</p>
     </div>
 
     <div class="shop-grid">
       <!-- Product 1 -->
-      <div class="product-card">
-        <h3>12oz Loft House Blend</h3>
-        <p>Smooth, chocolatey whole-bean coffee, roasted weekly.</p>
+      <article class="product-card">
+        <!-- Replace img src with your product photo -->
+        <img
+          src="images/beans-houseblend.jpg"
+          alt="Loft Café house blend coffee beans"
+          class="product-img"
+        />
+        <div class="product-body">
+          <h3>Loft House Blend • 12oz</h3>
+          <p>Smooth, chocolatey whole-bean coffee roasted weekly in-house.</p>
+        </div>
         <div class="product-footer">
           <span class="price">$15.00</span>
           <button
@@ -107,12 +176,19 @@
             Add to Cart
           </button>
         </div>
-      </div>
+      </article>
 
       <!-- Product 2 -->
-      <div class="product-card">
-        <h3>Loft Cold Brew (4-Pack)</h3>
-        <p>Ready-to-drink bottles. Keep in your fridge for busy mornings.</p>
+      <article class="product-card">
+        <img
+          src="images/coldbrew-pack.jpg"
+          alt="Bottled cold brew pack"
+          class="product-img"
+        />
+        <div class="product-body">
+          <h3>Cold Brew 4-Pack</h3>
+          <p>Ready-to-drink bottles. Keep a Loft morning in your fridge.</p>
+        </div>
         <div class="product-footer">
           <span class="price">$18.00</span>
           <button
@@ -124,12 +200,19 @@
             Add to Cart
           </button>
         </div>
-      </div>
+      </article>
 
       <!-- Product 3 -->
-      <div class="product-card">
-        <h3>Loft Mug</h3>
-        <p>Matte black ceramic mug with the Loft logo.</p>
+      <article class="product-card">
+        <img
+          src="images/loft-mug.jpg"
+          alt="Loft Café logo mug"
+          class="product-img"
+        />
+        <div class="product-body">
+          <h3>Loft Mug</h3>
+          <p>Matte ceramic mug with the Loft Café mark.</p>
+        </div>
         <div class="product-footer">
           <span class="price">$12.00</span>
           <button
@@ -141,12 +224,19 @@
             Add to Cart
           </button>
         </div>
-      </div>
+      </article>
 
       <!-- Product 4 -->
-      <div class="product-card">
-        <h3>Gift Card</h3>
-        <p>Digital gift card – perfect for students, friends, and regulars.</p>
+      <article class="product-card">
+        <img
+          src="images/gift-card.jpg"
+          alt="Loft Café gift card"
+          class="product-img"
+        />
+        <div class="product-body">
+          <h3>Digital Gift Card</h3>
+          <p>Let them choose their drink, pastry, or bag of beans.</p>
+        </div>
         <div class="product-footer">
           <span class="price">$25.00</span>
           <button
@@ -158,44 +248,41 @@
             Add to Cart
           </button>
         </div>
-      </div>
+      </article>
     </div>
 
     <p class="hint">
-      👉 For full checkout & payments, you’ll connect this cart to Stripe, Square, or your POS later (steps below).
+      For now, checkout opens an email with your order. Later you can connect this to Square, Stripe, or your POS.
     </p>
   </section>
 
-  <section id="visit" class="section section-alt">
-    <div class="section-header">
-      <h2>Visit Loft Café</h2>
-      <p>Drop in, grab a drink, and stay a while.</p>
+  <!-- GALLERY (for your real photos) -->
+  <section id="gallery" class="section section-light">
+    <div class="section-header center">
+      <h2>Inside Loft</h2>
+      <p>A peek into the space, the coffee, and the people who make it feel like home.</p>
     </div>
-    <div class="visit-grid">
-      <div>
-        <h3>Location</h3>
-        <p>123 Loft Street<br />Your City, ST 00000</p>
-        <h3>Hours</h3>
-        <p>
-          Mon–Fri: 7:00am – 7:00pm<br />
-          Sat–Sun: 8:00am – 6:00pm
-        </p>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:hello@loftcafe.com">hello@loftcafe.com</a></p>
-        <p>Phone: (000) 000-0000</p>
-        <h3>Social</h3>
-        <p>
-          Instagram: @loftcafe<br />
-          TikTok: @loftcafe
-        </p>
-      </div>
+
+    <div class="gallery-grid">
+      <!-- Replace these with your real images & filenames -->
+      <img src="images/loft-interior-1.jpg" alt="Loft Café seating area" />
+      <img src="images/loft-interior-2.jpg" alt="Loft Café bar and espresso machine" />
+      <img src="images/loft-coffee-1.jpg" alt="Latte art at Loft Café" />
+      <img src="images/loft-pastry-1.jpg" alt="Pastries at Loft Café" />
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <span>© <span id="year"></span> Loft Café. All rights reserved.</span>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">Loft Café</span>
+        <span class="footer-text">Instagram: @loftcafe • Contact: <a href="mailto:hello@loftcafe.com">hello@loftcafe.com</a></span>
+      </div>
+      <div class="footer-right">
+        <span>© <span id="year"></span> Loft Café</span>
+      </div>
+    </div>
   </footer>
 
   <!-- CART PANEL -->
@@ -209,12 +296,11 @@
       <div class="cart-total">
         Total: <span id="cart-total">$0.00</span>
       </div>
-      <!-- TODO: connect this button to real checkout -->
       <button id="checkout-btn" class="btn-primary btn-full">
         Checkout
       </button>
       <p class="cart-note">
-        For now, this could send an email order or link to your payment page.
+        This will open an email draft with your order details for now.
       </p>
     </div>
   </aside>
